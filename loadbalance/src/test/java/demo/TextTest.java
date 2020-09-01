@@ -1,5 +1,8 @@
 package demo;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class TextTest {
  
 	/**
@@ -7,7 +10,14 @@ public class TextTest {
 	 * 【10,25,19,89,75,56,34,54,16，9，-5】找到相加等于28的【19，9 】
 	 */
 	public static void main(String[] args) {
-		 getSpacialNum(28);
+		Queue queue = new LinkedList();
+		queue.offer(1);
+		queue.offer(1);
+
+		System.out.println(queue.size());
+
+
+		getSpacialNum(28);
 	}
 	
 	public static  int  getSpacialNum(int  num) {

@@ -70,9 +70,10 @@ public class TwoLinkedSum {
 
        TwoLinkedSum twoLinkedSum =  new TwoLinkedSum();
 
-        System.out.println(twoLinkedSum.addTwoNumbers(node1,node2).val);
-        System.out.println(twoLinkedSum.addTwoNumbers(node1,node2).next.val);
-        System.out.println(twoLinkedSum.addTwoNumbers(node1,node2).next.next.val);
+        ListNode newListNode =  twoLinkedSum.addTwoNumbers(node1,node2);
+        System.out.println(newListNode.val);
+        System.out.println(newListNode.next.val);
+        System.out.println(newListNode.next.next.val);
     }
 
 }
