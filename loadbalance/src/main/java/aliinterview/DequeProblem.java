@@ -37,13 +37,16 @@ public class DequeProblem {
             System.out.println(m);
         }
         //1 构造数组
+        System.out.print("sourcearray:");
         for (int i = 0; i < n; i++) {
             int num = new Random().nextInt(10);
             //开始实现，任何代码都可以修改
             deque.addLast(num);
-            System.out.println("source:" + num);
-        }
+            System.out.print(num);
+            System.out.print(" ");
 
+        }
+        System.out.println(" ");
 
         //2. 找子数组
         List<int[]> subArray = new ArrayList();
@@ -65,22 +68,26 @@ public class DequeProblem {
         for (int[] suba :
                 subArray) {
             u++;
+            System.out.print("suba" + u + ":");
             for (Integer ela :
                     suba) {
-                System.out.println("suba" + u + ":" + ela);
+                System.out.print(ela);
+                System.out.print(" ");
                 setTmp.add(ela);
             }
+            System.out.println(" ");
             sumArrayRepeatNum.add(setTmp.size());
         }
 
         //4.对子数组进行排序 从大到小
         Collections.reverse(sumArrayRepeatNum);
 
+        System.out.print("子数组不重复元素个数结果排序:");
         for (Integer sizeNum :
                 sumArrayRepeatNum) {
-            System.out.println("sizeNum:" + sizeNum);
+            System.out.print(sizeNum);
+            System.out.print(" ");
         }
-
 
     }
 }
