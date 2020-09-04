@@ -19,14 +19,6 @@ public class DequeProblem {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Deque deque = new ArrayDeque<>();
-        // deque.addFirst(); deque.addLast(); deque.removeFirst(); deque.removeLast()
-        // deque.size();
-
-        //1参数校验
-      /*if(args.length==0) {
-        System.out.println(0);
-      }*/
-
         // int n = Integer.parseInt(args[0]);
         //int m = Integer.parseInt(args[1]);
 
@@ -39,6 +31,7 @@ public class DequeProblem {
         //1 构造数组
         System.out.print("sourcearray:");
         for (int i = 0; i < n; i++) {
+            //in.nextInt()
             int num = new Random().nextInt(10);
             //开始实现，任何代码都可以修改
             deque.addLast(num);
@@ -63,12 +56,13 @@ public class DequeProblem {
 
         //3.找出子数组重复元素个数并缓存起来
         List<Integer> sumArrayRepeatNum = new ArrayList<>();
-        Set<Integer> setTmp = new HashSet<>(m);
+
         int u = 0;
         for (int[] suba :
                 subArray) {
             u++;
             System.out.print("suba" + u + ":");
+            Set<Integer> setTmp = new HashSet<>(m);
             for (Integer ela :
                     suba) {
                 System.out.print(ela);
@@ -80,7 +74,7 @@ public class DequeProblem {
         }
 
         //4.对子数组进行排序 从大到小
-        Collections.reverse(sumArrayRepeatNum);
+        Collections.sort(sumArrayRepeatNum);
 
         System.out.print("子数组不重复元素个数结果排序:");
         for (Integer sizeNum :
@@ -89,5 +83,6 @@ public class DequeProblem {
             System.out.print(" ");
         }
 
+        System.out.println(" ");
     }
 }
